@@ -96,7 +96,26 @@ function getCookie(name)
 
 function finalizarTarea(idFinalizar)
 {
+    new_id = idFinalizar.split('finalizar')[1];
+    estado_id = 'estado'+ new_id;
+    let estado_seleccionado =  document.getElementById(estado_id)
+    estado_seleccionado.innerHTML = "FINALIZADO"
+    datos = {
+        'estado': estado_seleccionado.innerHTML,
+        'idTarea': new_id
+    }
+    fetch('/finalizarTarea',{
+        method:"POST",
+        headers:{
+            "X-Requested-With":"XMLHttpRequest",
+            "X-CSRFToken": getCookie("csrftoken"),
+        },
+        body:JSON.stringify(datos)
+    })
+    .then(response => response.json())
+    .then(data => {
     console.log(idFinalizar)
+    })
     /*
     Pregunta 5
     a.

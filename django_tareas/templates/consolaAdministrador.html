@@ -38,7 +38,7 @@
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#nuevoUsuario"><i class="fa-solid fa-user-plus"></i> Agregar usuario</button>
                 </div>
                 <div class="col-2">
-                    <a class="btn btn-success" href="{% url 'django_tareas:descargarReporteUsuarios' %}"><i class="fa-solid fa-download"></i> Descargar</a>
+                    <a class="btn btn-success" href="{% url 'django_tareas:descargarReporteUsuarios'  %}"><i class="fa-solid fa-download"></i> Descargar</a>
                 </div>
             </div>
         </div>
@@ -160,6 +160,36 @@
                     Crear los inputs necesarios para poder cargar la informacion
                     del usuario, indicar los label's de los campos apropiadamente
                 -->
+                <div class="row form-group justify-content-around mb-3">
+                    <div class="col-5">
+                        <label>Nombre :</label>
+                        <input class="form-control" type="text" readonly id="nombre">
+                    </div>
+                    <div class="col-5">
+                        <label>Apellido :</label>
+                        <input class="form-control" type="text" readonly id="apellido">
+                    </div>
+                </div>
+                <div class="row form-group justify-content-around mb-3">
+                    <div class="col-5">
+                        <label>Email :</label>
+                        <input class="form-control" type="email" readonly id="emailUsuario">
+                    </div>
+                    <div class="col-5">
+                        <label>Fecha de ingreso :</label>
+                        <input class="form-control" type="text" readonly id="fechaIngreso">
+                    </div>
+                </div>
+                <div class="row form-group justify-content-around mb-3">
+                    <div class="col-5">
+                        <label>Nro Celular :</label>
+                        <input class="form-control" type="text" id="nroCelular" required>
+                    </div>
+                    <div class="col-6">
+                        <label>Profesion :</label>
+                        <input class="form-control" type="text" id="profesionUsuario" required>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -236,6 +236,7 @@ def publicarComentario(request):
     })
 
 def descargarReporteUsuarios(request):
+
     """
     PREGUNTA 1
     En esta funcion debe generar un pdf con utilizando la libreria reportlab
